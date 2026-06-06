@@ -5,20 +5,20 @@
 class Kulti < Formula
   desc "CLI tool for creating and managing k3s clusters on local hypervisors"
   homepage "https://zpallin.com/kulti"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.1/downloads/kulti_0.3.1_darwin_amd64.tar.gz"
-      sha256 "e2c32c6b72fa10db5324dfee86aa712539cf9397bc33a2e3237c880fc9e8e015"
+      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.2/downloads/kulti_0.3.2_darwin_amd64.tar.gz"
+      sha256 "b41ef1c323f96e82fda1a731048d560e834f32190fbfde3d178e71e891f5af41"
 
       define_method(:install) do
         bin.install "kulti"
       end
     end
     if Hardware::CPU.arm?
-      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.1/downloads/kulti_0.3.1_darwin_arm64.tar.gz"
-      sha256 "8b78985b08e550e2d23d52236670018b270abdcd3f2fd731c0849ab086babc1b"
+      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.2/downloads/kulti_0.3.2_darwin_arm64.tar.gz"
+      sha256 "8cfb330f251cc2c181218ca9fb02065eaca6cb2985cb8346d9a7811f730f8d2c"
 
       define_method(:install) do
         bin.install "kulti"
@@ -28,15 +28,15 @@ class Kulti < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.1/downloads/kulti_0.3.1_linux_amd64.tar.gz"
-      sha256 "aed15480567681c8348be60472b753ff0eee73cdaa6fb1ec4fdad55a7362406d"
+      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.2/downloads/kulti_0.3.2_linux_amd64.tar.gz"
+      sha256 "db0248ba512833b1cd3d16ed90fa34077ddf8f2cd4c3a44e11e9001a207dab89"
       define_method(:install) do
         bin.install "kulti"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.1/downloads/kulti_0.3.1_linux_arm64.tar.gz"
-      sha256 "1e0b484159f27b11f020d3352919b625f430077fc8b745d325d417391dad7fe8"
+      url "https://gitlab.com/zpallin/kulti/-/releases/v0.3.2/downloads/kulti_0.3.2_linux_arm64.tar.gz"
+      sha256 "1912c8c13724a1fe734c2012438633401406a81c8ce3ac80f759e6495dfaca3a"
       define_method(:install) do
         bin.install "kulti"
       end
